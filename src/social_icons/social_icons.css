@@ -1,0 +1,20 @@
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+    padding: 10px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+    color: #f1c40f; /* Change color on hover */
+  }
+  

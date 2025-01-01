@@ -1,0 +1,96 @@
+.row {
+    margin-left: 20px;
+    color: #fff;
+    position: relative; /* Ensures correct positioning of arrow buttons */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Ensures content is aligned to the left */
+    padding: 10px 20px; /* Add padding for spacing */
+    margin-bottom: 20px;
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+.row h2 {
+    font-size: 24px;
+    color: white; /* Adjust color as needed */
+    margin: 0 0 10px 0; /* Add spacing below the title */
+    text-align: left; /* Ensures the title is left-aligned */
+    width: 100%; /* Takes full width */
+}
+
+.posters {
+    display: flex;
+    padding: 0 10px; /* Adjusted for tighter spacing */
+    overflow-x: auto; /* Ensure scrolling is allowed */
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.posters::-webkit-scrollbar {
+    display: none;
+}
+
+.arrow-buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 20; /* Ensure it's above the posters */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    pointer-events: none; /* Prevent buttons from blocking interaction with posters */
+}
+
+.scroll-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    pointer-events: auto; /* Enable click events */
+    z-index: 20; /* Ensure it's above posters */
+    transition: transform 0.2s;
+}
+
+.scroll-button:hover {
+    transform: scale(1.2);
+}
+
+.poster-container {
+    position: relative;
+    display: inline-block;
+    will-change: transform;
+}
+
+.poster-container:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+.poster {
+    max-height: 250px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.smallPoster {
+    max-height: 150px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.video {
+    width: 100%; /* Takes full width of the parent container */
+    max-width: 100%; /* Prevent overflow */
+    margin-top: 50px;  /* Add margin to avoid overlap with other content */
+    height: 390px;
+    display: block; /* Ensure it behaves like a block element */
+    margin: 0; /* Remove default margins */
+}

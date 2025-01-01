@@ -1,0 +1,118 @@
+.navbar {
+    background-color: black;
+    color: white;
+    padding: 10px 20px; /* Spacing for the navbar */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons and avatar */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between logo and links */
+}
+
+.logo {
+    cursor: pointer;
+    width: 80px;
+    display: block; /* Prevent inline spacing issues */
+    cursor: pointer;
+    object-fit: contain; /* Ensure it doesn't stretch */
+    margin: 0;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    padding: 10px 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500; /* Added some emphasis */
+}
+
+.nav-links a:hover {
+    color: #f1f1f1;
+}
+
+.navbar__icons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space out the icons */
+}
+
+.navbar__icon {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.navbar__icon:hover {
+    transform: scale(1.2);
+}
+
+.navbar__icon:focus {
+    outline: none;
+}
+
+.material-symbols-outlined {
+    font-size: 24px;
+    color: white;
+}
+
+.dropdown {
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dropdown-item {
+    padding: 10px 15px;
+    color: white;
+    background: transparent;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #333;
+  }
